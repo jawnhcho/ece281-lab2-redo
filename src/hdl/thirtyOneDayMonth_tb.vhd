@@ -59,12 +59,12 @@ architecture test_bench of thirtyOneDayMonth_tb is
   -- declare the component of your top-level design unit under test (UUT) (looks very similar to entity declaration)
   component sevenSegDecoder is
     Port ( i_D : in STD_LOGIC_VECTOR (3 downto 0);
-             o_S : out std_logic_vector (6 downto 0));
+           o_S : out std_logic_vector (6 downto 0));
   end component;
 
   -- declare any additional components required
   
-signal w_sw : std_logic_vector(3 downto 0) := "000";
+signal w_sw : std_logic_vector(3 downto 0) := "0000";
 signal w_seg : std_logic_vector(6 downto 0);
   
 begin
@@ -103,17 +103,17 @@ begin
             assert w_seg = "0000000" report "error" severity failure;
         w_sw <= x"9"; wait for 10 ns;
             assert w_seg = "0011000" report "error" severity failure;
-        w_sw <= x"A"; wait for 10 ns;
+        w_sw <= x"a"; wait for 10 ns;
             assert w_seg = "0001000" report "error" severity failure;
-        w_sw <= x"B"; wait for 10 ns;
+        w_sw <= x"b"; wait for 10 ns;
             assert w_seg = "0000011" report "error" severity failure;
-        w_sw <= x"C"; wait for 10 ns;
+        w_sw <= x"c"; wait for 10 ns;
             assert w_seg = "0100111" report "error" severity failure;
-        w_sw <= x"D"; wait for 10 ns;
+        w_sw <= x"d"; wait for 10 ns;
             assert w_seg = "0100001" report "error" severity failure;
-        w_sw <= x"E"; wait for 10 ns;
+        w_sw <= x"e"; wait for 10 ns;
             assert w_seg = "0000110" report "error" severity failure;
-        w_sw <= x"F"; wait for 10 ns;
+        w_sw <= x"f"; wait for 10 ns;
             assert w_seg = "0001110" report "error" severity failure;
 		wait; -- wait forever
 	end process;	
