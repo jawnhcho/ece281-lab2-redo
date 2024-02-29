@@ -50,11 +50,11 @@ library ieee;
   use ieee.std_logic_1164.all;
   use ieee.numeric_std.all;
   
-entity thirtyOneDayMonth_tb is --notice entity is empty.  The testbench has no external connections.
-end thirtyOneDayMonth_tb;
+entity sevenSegDecoder_tb is --notice entity is empty.  The testbench has no external connections.
+end sevenSegDecoder_tb;
 
            
-architecture test_bench of thirtyOneDayMonth_tb is 
+architecture test_bench of sevenSegDecoder_tb is 
 	
   -- declare the component of your top-level design unit under test (UUT) (looks very similar to entity declaration)
   component sevenSegDecoder is
